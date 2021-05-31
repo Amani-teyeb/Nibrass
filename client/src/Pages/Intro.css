@@ -1,0 +1,798 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+  }
+  
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    position: relative;
+    opacity: 0.9;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .signinup {
+    background-image: url("https://www.familyeducation.com/sites/default/files/fe_slideshow/2009_12/Kids_Laptop_Popcorn_1_H.jpg");
+    min-height: 100vh;
+    opacity: 0.3;
+  }
+  
+  .bgimg-1 {
+    background-image: url("https://www.familyeducation.com/sites/default/files/fe_slideshow/2009_12/Kids_Laptop_Popcorn_1_H.jpg");
+    min-height: 100vh;
+  }
+  
+  .bgimg-3 {
+    background-image: url("https://www.familyeducation.com/sites/default/files/fe_slideshow/2009_12/Kids_Laptop_Popcorn_1_H.jpg");
+    min-height: 400px;
+  }
+  
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  .logo {
+    color: #b67338;
+    background-color: transparent;
+  }
+  .auth {
+    display: flex;
+    justify-content: space-between;
+  }
+  .auth button {
+    color: white;
+    border: #92b5d2 !important;
+    border-radius: 60px;
+    background-color: #92b5d2 !important;
+  }
+  
+  .caption span.border {
+    background-color: transparent;
+    color: #fff;
+    padding: 18px;
+    font-size: 100%;
+    letter-spacing: 10px;
+  }
+  
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", mplens-serif;
+    color: #111;
+  }
+  
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
+  
+  /* Footer */
+  
+  footer {
+    color: #fff;
+    background-attachment: fixed;
+    background-color: #222;
+  
+    background-size: cover;
+    background-position: bottom;
+  }
+  footer p {
+    color: #ccc;
+  }
+  footer a {
+    color: #ccc;
+  }
+  .social-pet li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .social-pet li a {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    line-height: 35px;
+    background-color: #3a5a95;
+    color: #fff;
+  }
+  .social-pet li:nth-child(2) a {
+    background-color: #57aced;
+  }
+  .social-pet li:nth-child(3) a {
+    background-color: #dd4f43;
+  }
+  .social-pet li:nth-child(4) a {
+    background-color: #6b27b2;
+  }
+  .social-pet li a:hover {
+    background-color: #0141a2;
+  }
+  .social-pet li a:hover i {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+  .recent-post li {
+    display: block;
+    color: #ccc;
+    margin-bottom: 25px;
+  }
+  .recent-post li label {
+    float: left;
+    border: 2px solid #ccc;
+    padding: 1px 7px;
+    text-align: center;
+  }
+  .recent-post li label span {
+    color: #fff;
+  }
+  footer .input-group-addon {
+    background-color: #0141a2;
+    padding: 10px;
+  }
+  .f-address li {
+    display: inline-block;
+  }
+  .f-address li i {
+    color: #2995de;
+    font-size: 18px;
+  }
+  .f-address li a {
+    color: #ccc;
+  }
+  /*=-Copyright-=*/
+  .copyright {
+    background-color: #111;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+  /* Figure */
+  @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400);
+  figure.snip1307 {
+    font-family: "Josefin Sans", Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    background: #000000;
+    text-align: left;
+    color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+  }
+  figure.snip1307 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+  figure.snip1307 img {
+    max-width: 100%;
+    vertical-align: top;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  }
+  figure.snip1307 img:first-of-type {
+    filter: none;
+  }
+  figure.snip1307 img:nth-of-type(2) {
+    position: absolute;
+    right: 95%;
+    top: 0;
+    z-index: 1;
+  }
+  figure.snip1307 figcaption {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 15px 15px 15%;
+  }
+  figure.snip1307 figcaption h3,
+  figure.snip1307 figcaption p {
+    margin: 0 0 5px;
+  }
+  figure.snip1307 figcaption h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  figure.snip1307 figcaption h3 span {
+    font-weight: 700;
+  }
+  figure.snip1307 figcaption p {
+    opacity: 0.8;
+  }
+  figure.snip1307 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+  }
+  figure.snip1307:hover img,
+  figure.snip1307.hover img {
+    -webkit-transform: translateX(95%);
+    transform: translateX(95%);
+  }
+  
+  /* second card */
+  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+  @import url(https://fonts.googleapis.com/css?family=Teko:700);
+  .snip1563 {
+    background-color: #fff;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    margin: 10px 5px;
+    max-width: 315px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: right;
+    width: 100%;
+  }
+  
+  .snip1563 *,
+  .snip1563 *:before,
+  .snip1563 *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.45s ease;
+    transition: all 0.45s ease;
+  }
+  
+  .snip1563 img {
+    backface-visibility: hidden;
+    max-width: 100%;
+    vertical-align: top;
+  }
+  
+  .snip1563:before,
+  .snip1563:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background-color: #ec5adbc7;
+    opacity: 0.5;
+    -webkit-transition: all 0.45s ease;
+    transition: all 0.45s ease;
+  }
+  
+  .snip1563:before {
+    -webkit-transform: skew(30deg) translateX(80%);
+    transform: skew(30deg) translateX(80%);
+  }
+  
+  .snip1563:after {
+    -webkit-transform: skew(-30deg) translateX(70%);
+    transform: skew(-30deg) translateX(70%);
+  }
+  
+  .snip1563 figcaption {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    bottom: 0;
+    padding: 20px 20px 20px 40%;
+  }
+  
+  .snip1563 figcaption:before,
+  .snip1563 figcaption:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ec5adbc7;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    content: "";
+    opacity: 0.5;
+    z-index: -1;
+  }
+  
+  .snip1563 figcaption:before {
+    -webkit-transform: skew(30deg) translateX(100%);
+    transform: skew(30deg) translateX(100%);
+  }
+  
+  .snip1563 figcaption:after {
+    -webkit-transform: skew(-30deg) translateX(90%);
+    transform: skew(-30deg) translateX(90%);
+  }
+  
+  .snip1563 h3,
+  .snip1563 p {
+    margin: 0;
+    opacity: 0;
+    letter-spacing: 1px;
+  }
+  
+  .snip1563 h3 {
+    font-family: "Teko", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+  
+  .snip1563 p {
+    font-size: 0.9em;
+  }
+  
+  .snip1563 a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .snip1563:hover h3,
+  .snip1563.hover h3,
+  .snip1563:hover p,
+  .snip1563.hover p {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  
+  .snip1563:hover:before,
+  .snip1563.hover:before {
+    -webkit-transform: skew(30deg) translateX(30%);
+    transform: skew(30deg) translateX(30%);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+  }
+  
+  .snip1563:hover:after,
+  .snip1563.hover:after {
+    -webkit-transform: skew(-30deg) translateX(20%);
+    transform: skew(-30deg) translateX(20%);
+  }
+  
+  .snip1563:hover figcaption:before,
+  .snip1563.hover figcaption:before {
+    -webkit-transform: skew(30deg) translateX(50%);
+    transform: skew(30deg) translateX(50%);
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+  }
+  
+  .snip1563:hover figcaption:after,
+  .snip1563.hover figcaption:after {
+    -webkit-transform: skew(-30deg) translateX(40%);
+    transform: skew(-30deg) translateX(40%);
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+  }
+  
+
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.signinup {
+  background-image: url("https://www.familyeducation.com/sites/default/files/fe_slideshow/2009_12/Kids_Laptop_Popcorn_1_H.jpg");
+  min-height: 100vh;
+  opacity: 0.3;
+}
+
+.bgimg-1 {
+  background-image: url("https://www.familyeducation.com/sites/default/files/fe_slideshow/2009_12/Kids_Laptop_Popcorn_1_H.jpg");
+  min-height: 100vh;
+}
+
+
+
+.bgimg-3 {
+  background-image: url("https://www.familyeducation.com/sites/default/files/fe_slideshow/2009_12/Kids_Laptop_Popcorn_1_H.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.logo {
+  color: #b67338;
+  background-color: transparent;
+}
+.auth {
+  display: flex;
+  justify-content: space-between;
+}
+.auth button {
+  color: white;
+  border: #92b5d2 !important;
+  border-radius: 60px;
+  background-color: #92b5d2 !important;
+}
+
+.caption span.border {
+  background-color: transparent;
+  color: #fff;
+  padding: 18px;
+  font-size: 100%;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", mplens-serif;
+  color: #111;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+/* Footer */
+
+footer {
+  color: #fff;
+  background-attachment: fixed;
+  background-color: #222;
+
+  background-size: cover;
+  background-position: bottom;
+}
+footer p {
+  color: #ccc;
+}
+footer a {
+  color: #ccc;
+}
+.social-pet li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.social-pet li a {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  line-height: 35px;
+  background-color: #3a5a95;
+  color: #fff;
+}
+.social-pet li:nth-child(2) a {
+  background-color: #57aced;
+}
+.social-pet li:nth-child(3) a {
+  background-color: #dd4f43;
+}
+.social-pet li:nth-child(4) a {
+  background-color: #6b27b2;
+}
+.social-pet li a:hover {
+  background-color: #0141a2;
+}
+.social-pet li a:hover i {
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+.recent-post li {
+  display: block;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+.recent-post li label {
+  float: left;
+  border: 2px solid #ccc;
+  padding: 1px 7px;
+  text-align: center;
+}
+.recent-post li label span {
+  color: #fff;
+}
+footer .input-group-addon {
+  background-color: #0141a2;
+  padding: 10px;
+}
+.f-address li {
+  display: inline-block;
+}
+.f-address li i {
+  color: #2995de;
+  font-size: 18px;
+}
+.f-address li a {
+  color: #ccc;
+}
+/*=-Copyright-=*/
+.copyright {
+  background-color: #111;
+  padding: 12px 0;
+  font-size: 14px;
+}
+/* Figure */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400);
+figure.snip1307 {
+  font-family: "Josefin Sans", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  background: #000000;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+figure.snip1307 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+figure.snip1307 img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+figure.snip1307 img:first-of-type {
+  filter: none;
+}
+figure.snip1307 img:nth-of-type(2) {
+  position: absolute;
+  right: 95%;
+  top: 0;
+  z-index: 1;
+}
+figure.snip1307 figcaption {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 15px 15px 15%;
+}
+figure.snip1307 figcaption h3,
+figure.snip1307 figcaption p {
+  margin: 0 0 5px;
+}
+figure.snip1307 figcaption h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+figure.snip1307 figcaption h3 span {
+  font-weight: 700;
+}
+figure.snip1307 figcaption p {
+  opacity: 0.8;
+}
+figure.snip1307 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+}
+figure.snip1307:hover img,
+figure.snip1307.hover img {
+  -webkit-transform: translateX(95%);
+  transform: translateX(95%);
+}
+
+/* second card */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Teko:700);
+.snip1563 {
+  background-color: #fff;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  margin: 10px 5px;
+  max-width: 315px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: right;
+  width: 100%;
+}
+
+.snip1563 *,
+.snip1563 *:before,
+.snip1563 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1563 img {
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1563:before,
+.snip1563:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-color: #ec5adbc7;
+  opacity: 0.5;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1563:before {
+  -webkit-transform: skew(30deg) translateX(80%);
+  transform: skew(30deg) translateX(80%);
+}
+
+.snip1563:after {
+  -webkit-transform: skew(-30deg) translateX(70%);
+  transform: skew(-30deg) translateX(70%);
+}
+
+.snip1563 figcaption {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  bottom: 0;
+  padding: 20px 20px 20px 40%;
+}
+
+.snip1563 figcaption:before,
+.snip1563 figcaption:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ec5adbc7;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  content: "";
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.snip1563 figcaption:before {
+  -webkit-transform: skew(30deg) translateX(100%);
+  transform: skew(30deg) translateX(100%);
+}
+
+.snip1563 figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(90%);
+  transform: skew(-30deg) translateX(90%);
+}
+
+.snip1563 h3,
+.snip1563 p {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+
+.snip1563 h3 {
+  font-family: "Teko", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.snip1563 p {
+  font-size: 0.9em;
+}
+
+.snip1563 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1563:hover h3,
+.snip1563.hover h3,
+.snip1563:hover p,
+.snip1563.hover p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.snip1563:hover:before,
+.snip1563.hover:before {
+  -webkit-transform: skew(30deg) translateX(30%);
+  transform: skew(30deg) translateX(30%);
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.snip1563:hover:after,
+.snip1563.hover:after {
+  -webkit-transform: skew(-30deg) translateX(20%);
+  transform: skew(-30deg) translateX(20%);
+}
+
+.snip1563:hover figcaption:before,
+.snip1563.hover figcaption:before {
+  -webkit-transform: skew(30deg) translateX(50%);
+  transform: skew(30deg) translateX(50%);
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.snip1563:hover figcaption:after,
+.snip1563.hover figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(40%);
+  transform: skew(-30deg) translateX(40%);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
