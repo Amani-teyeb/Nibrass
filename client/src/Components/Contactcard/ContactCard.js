@@ -10,7 +10,7 @@ import {deleteUser} from "../../Redux/actions/user"
 
 const ContactCard = ({user}) => {
     const dispatch=useDispatch()
-    
+    // comment
     return (
         <div className="contact-card">
             <img src={avatar} alt="avatar" className="avatar" />
