@@ -7,7 +7,9 @@ import {
   CURRENT_USER,
   LOGOUT_USER,
   GET_ALL_USERS,
+  DELETE_USER
 } from "../constants/user";
+
 
 export const register = (user, history) => async (dispatch) => {
   dispatch({ type: LOAD_USER });
@@ -21,26 +23,51 @@ export const register = (user, history) => async (dispatch) => {
     dispatch({ type: FAIL_USER, payload: error.response.data.errors });
   }
 };
-
-export const login = (user, history) => async (dispatch) => {
-  dispatch({ type: LOAD_USER });
-  try {
-    let result = await axios.post("/api/user/login", user);
-    dispatch({ type: LOGIN_USER, payload: result.data }); //{msg,token,user}
-    history.push("/user/dashboard");
-  } catch (error) {
-    dispatch({ type: FAIL_USER, payload: error.response.data.errors });
-  }
-};
 export const  getUsers=()=>async(dispatch)=>{
   console.log("string")
   try {
   const res=await axios.get("/api/user/allusers")
   dispatch({type:GET_ALL_USERS,payload:res.data.users})
   } catch (error) {
-      console.log(error)      
+      console.log(error)
   }
 }
+
+export const deleteUser = (id) => async (dispatch) => {
+
+  try {
+    await axios.delete(`/api/user/${id}`);
+    dispatch(getUsers()); 
+  
+  } catch (error) {
+    console.log(error)
+  }
+};
+
+export const login = (user, history) => async (dispatch) => {
+  dispatch({ type: LOAD_USER });
+  try {
+    let result = await axios.post("/api/user/login", user);
+    dispatch({ type: LOGIN_USER, payload: result.data }); //{msg,token,user}
+    if (result.data.user.role=='student'){
+      history.push("/user/dashboard");
+    }else { history.push("/adminhome");}
+  } catch (error) {
+    dispatch({ type: FAIL_USER, payload: error.response.data.errors });
+  }
+};
+
+export const update = (id, user) => async (dispatch) => {
+  dispatch({ type: LOAD_USER });
+  try {
+      let result = await axios.put(`/api/user/${id}`, user);
+      dispatch({ type: CURRENT_USER, payload: result.data });
+  } catch (error) {
+    console.log(error)
+      dispatch({ type: FAIL_USER, payload: error.data });
+  }
+};
+
 
 export const current = () => async (dispatch) => {
   try {
@@ -68,4 +95,3 @@ export const videErrors = () => {
     type: "VIDE_ERRORS",
   };
 };
- // comment

@@ -4,9 +4,11 @@ import "./UserDashboard.css";
 import MyNavbar from "../../Components/MyNavBar";
 import AddTask from "../../Components/Todo/AddTask/AddTask";
 import ListTask from "../../Components/Todo/ListTask/ListTask";
+import EditUser from "../../Components/Modals/EditUser";
 
 const Profile = () => {
   const user = useSelector((state) => state.userReducer.user);
+  
   return (
     <div>
       <MyNavbar/>
@@ -20,20 +22,18 @@ const Profile = () => {
         <div className="col-xl-8 col-md-6 col-sm-10 mx-auto">
           {/* Profile widget */}
           <div className="bg-white shadow rounded overflow-hidden">
-            <div className="px-4 pt-0 pb-4 bg-dark">
+            <div className="px-4 pt-0 pb-4 bg-light">
               <div className="media align-items-end profile-header">
                 <div className="profile mr-3">
                   <img
-                    src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK40BRAKBWHkylguOvYtE3-1hkm-YmMWaMWQ&usqp=CAU"
                     alt="..."
                     width={130}
                     className="rounded mb-2 img-thumbnail"
                   />
-                  <a href="#" className="btn btn-dark btn-sm btn-block">
-                    Edit profile
-                  </a>
+                 <EditUser/>
                 </div>
-                <div className="media-body mb-5 text-white">
+                <div className="media-body mb-5 text-dark">
                   <h3 className="mt-0 mb-0">{user && user.Firstname}</h3>
                   <h4 className="small mb-4">
                     {" "}

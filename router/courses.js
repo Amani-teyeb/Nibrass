@@ -1,15 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const {isAuth} = require("../middleware/isAuth");
-const Course = require("../models/Course");
+const {createCourse, getCourses, getCourseById, removeCourse, editCourse} = require ('../controllers/course');
+const { isAuth, adminMiddleware } = require("../middleware/isAuth");
 
-router.get('/courses', isAuth ,async(req,res)=>{
-    try {
-        const courses =await Course.find()
-        res.status(200).send({msg:"all courses", courses})
-    } catch (error) {
-        res.status(500).send("impossible to get courses")
-    }
-});
 
+router.post("/add", createCourse);
+router.get("/get", getCourses);
+router.get("/:id", getCourseById);
+router.post("/:id", removeCourse);
+router.put("/:id", editCourse)
+
+  
 module.exports = router;

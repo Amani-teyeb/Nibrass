@@ -7,6 +7,7 @@ const {
   LOAD_USER,
   CURRENT_USER,
   LOGOUT_USER,
+  DELETE_USER
 } = require("../constants/user");
 
 // initialstate
@@ -38,12 +39,12 @@ const userReducer = (state = initialState, { type, payload }) => {
     case LOGOUT_USER:
       localStorage.removeItem("token");
       return { ...state, user: {}, isAuth: false };
+    case DELETE_USER:
+      
     case "VIDE_ERRORS":
       return { ...state, errors: [] };
     case "GET_ALL_USERS":
-      console.log("msg")
-      //return { ...state, users: payload};
-      
+    return { ...state, users: payload};
     default:
       return state;
   }

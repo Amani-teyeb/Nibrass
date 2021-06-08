@@ -7,13 +7,13 @@ const Task = require("../models/Todo");
 
 const router = express.Router();
 
-router.post("/add", async(req,res)=>{
+router.post("/add", isAuth, async(req,res)=>{
     
     try {
-        const {task, user_id }= req.body;
+        const {task}= req.body;
         const newTask= new Task({task:task, user_id : req.user._id});
         await newTask.save();
-        res.status(200).send({ msg: "task added successfully", task: newTask});
+        res.status(200).send({ msg: "task added successfully",  newTask});
         } catch (error) {
             console.log(error);
         res.status(500).send({ errors: [{ msg: "can't add task" }] });
@@ -22,9 +22,10 @@ router.post("/add", async(req,res)=>{
 
 });
 
-router.post("/get",isAuth ,async(req,res)=>{
+router.get("/get",isAuth ,async(req,res)=>{
+    const id=req.user._id
     try {
-        const Tasks =await Task.findById({user_id : req.user._id})
+        const Tasks =await Task.find({user_id : req.user._id})
         res.status(200).send({msg:"all Tasks", Tasks})
     } catch (error) {
         res.status(500).send({ errors: [{ msg: "can't get tasks" }] })

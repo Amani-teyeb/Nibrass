@@ -1,24 +1,24 @@
-
-const {
-  ADD_TASK,
-  TOGGLE_TASK,
-  
-} = require("../constants/todos");
-
+const { ADD_TASK, GET_TASK } = require("../constants/todos");
 
 const initialState = {
   todos: [],
+  load: false,
 };
 
-const todosReducer= (state = initialState, { type, payload }) =>{
-  
+const todosReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_TASK: {
       return {
-        todos: [
-          ...state.todos,
-          {task: payload.task},
-        ],
+        ...state,
+        todos: [payload,...state.todos],
+        load: false,
+      };
+    }
+    case GET_TASK: {
+      return {
+        ...state,
+        load: false,
+        todos: payload,
       };
     }
     // case TOGGLE_TASK: {
@@ -28,7 +28,7 @@ const todosReducer= (state = initialState, { type, payload }) =>{
     //     ),
     //   };
     // }
-    
+
     default:
       return state;
   }

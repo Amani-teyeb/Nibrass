@@ -4,7 +4,7 @@ import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import { useDispatch,  useSelector} from "react-redux";
 import { login,  videErrors} from "../../Redux/actions/teacher";
 import Errors from "../../Components/Errors/Error";
-import "./Login.css";
+
 
 
 

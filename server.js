@@ -12,7 +12,6 @@ app.use(express.json());
 app.use("/api/user", require("./router/user"));
 
 app.use("/api/teacher", require("./router/teacher"));
-
 app.use("/api/course", require("./router/courses"));
 app.use("/api/todo", require("./router/todo"));
 

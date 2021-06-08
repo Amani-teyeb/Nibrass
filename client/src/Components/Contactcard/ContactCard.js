@@ -1,33 +1,29 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+
 
 import './ContactCard.css'
-import editBtn from '../../assets/Usercard/edit.png'
 import avatar from '../../assets/Usercard/avatar.png'
 import deleteBtn from '../../assets/Usercard/delete.png'
-
+import {useDispatch} from 'react-redux'
+import {deleteUser} from "../../Redux/actions/user"
 
 
 const ContactCard = ({user}) => {
-
+    const dispatch=useDispatch()
+    
     return (
         <div className="contact-card">
             <img src={avatar} alt="avatar" className="avatar" />
-            <h3>userName</h3>
-            <span>email</span>
-            <span>phone</span>
+            <h3>{user.Lastname+" "+user.Firstname }</h3>
+            <span>{user.email}</span>
+            <span>{user.phone}</span>
             <div className="delete-edit-btns">
-                <img src={deleteBtn}
+                <img src={deleteBtn} onClick={()=>{dispatch(deleteUser(user._id))}}
                     alt="delete-icon"
                    
                 />
                 
-                   <Link to='/'>
-                   <img src={editBtn}
-                        alt="edit-icon"
-                        
-                    />
-                   </Link>
+                  
                 
             </div>
         </div>

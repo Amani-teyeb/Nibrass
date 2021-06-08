@@ -70,4 +70,51 @@ exports.login= async(req,res)=>{
     res.status(500).send({errors:[{msg:"Something went wrong"}]})
     console.log(error)
   }
-}
+};
+
+exports.updateUser = async (req, res) => {
+  try {
+      const user = await User.findOneAndUpdate(
+          { _id: req.params.id },
+          { $set: { ...req.body } },
+          { new: true }
+      );
+
+      res.status(200).send({ msg: "user updated", user });
+  } catch (error) {
+      res.status(500).send({ msg: error });
+  }
+};
+
+exports.addfavorite = async (req, res) => {
+  try {
+      const newfav = req.body.newfav;
+      const user = await User.findOne({ _id: req.params.id });
+      if (user) {
+          const favExist = user.favorites.find(
+              (e) => e._id === newfav._id
+          );
+          if (favExist) {
+              res.status(401).send({ msg: "course already added to your library" });
+          }
+          let x = [...user.favorites, newfav];
+          await User.findByIdAndUpdate({ _id: req.params.id }, { favorites: x });
+          res.status(200).send({ msg: "course added to library" });
+      }
+  } catch (error) {
+      res.status(500).send({ msg: "fail to add course to your library" });
+  }
+};
+
+exports.removefavorite = async (req, res) => {
+  try {
+      const courseRemove = req.body.courseRemove;
+      const user = await User.findOne({ _id: req.params.id });
+      const x = user.favorites;
+      const y = x.filter((el) => el._id !== courseRemove._id);
+      await User.findByIdAndUpdate({ _id: req.params.id }, { favorites: y });
+      res.status(200).send({ msg: "course removed from library" });
+  } catch (error) {
+      res.status(500).send({ msg: "fail to remove course from library" });
+  }
+};

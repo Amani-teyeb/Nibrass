@@ -1,13 +1,16 @@
-/*const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema, model }=mongoose;
+
 
 const courseSchema = new Schema({
 
-    url:{type: String},
-    Category:{type:String}, // 1ere année .....
-    theme:{type:String},   // matière
+    url :{type: String},
     titre:{type:String},
-    favorite:{type:Boolean}, // pr l'ajout aux favorie
-   
-});
-*/
+    level:{type:String},
+    theme:{type:String},
+    image:{type:String},
+    description:{type:String},
+    favorite: {type:Boolean},
+    },{timestamps: true,});
+
+module.exports= Course= model("course", courseSchema);

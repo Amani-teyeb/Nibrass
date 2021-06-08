@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const { Schema, model }=mongoose; 
 
 const userSchema= new Schema({
-    Firstname: {type: String, required: true},
-    Lastname: {type: String, required: true},
+    firstname: {type: String, required: true},
+    lastname: {type: String, required: true},
     email: {type: String, required: true},
     password: {type: String, required: true},
     phone: Number,
@@ -13,6 +13,8 @@ const userSchema= new Schema({
       enum: ["student", "admin", "teacher"],
       default: "student",
     },
+    image:{type:String},
+    favorites:{ type: Array, default: [] },
     
 
     },{timestamps: true,});

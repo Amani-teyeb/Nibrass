@@ -38,13 +38,13 @@ const Signupt = ({ history }) => {
                         <Col md={6}>     
                          <Form.Group controlId="formBasicPassword">
                            <Form.Label>First Name</Form.Label>
-                           <Form.Control type="text" name="Firstname" placeholder="Enter your first name" onChange={handleChange} />
+                           <Form.Control type="text" name="firstname" placeholder="Enter your first name" onChange={handleChange} />
                         </Form.Group>
                         </Col>
                         <Col md={6}>
                         <Form.Group controlId="formBasicPassword">
                            <Form.Label>Last Name</Form.Label>
-                           <Form.Control type="text" name="Lastname" placeholder="Enter your Last name" onChange={handleChange} />
+                           <Form.Control type="text" name="lastname" placeholder="Enter your Last name" onChange={handleChange} />
                         </Form.Group>
                         </Col>
                     </Row>
